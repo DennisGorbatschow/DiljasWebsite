@@ -36,7 +36,7 @@
             
     </head>
     <body>
-        <div id="heart-container"></div>
+        <div id="falling"></div> 
         <h1>А я тея люблю моя самая нежная красавица</h1>
         <div>
             <img src="two-cats-one-love-v0-vamy6d7ajfr81.webp" width="400px"/>
@@ -44,8 +44,7 @@
         <button id="button1" type="button">Я передумала :/</button>  
     <script>
         function createHeart() {
-          const heart = document.createElement("heart-container");
-          container.appendChild(heart);
+          const heart = document.createElement("falling");
           heart.classList.add("heart");
           heart.innerText = "❤️";
           heart.style.left = Math.random() * 100 + "vw";
