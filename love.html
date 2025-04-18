@@ -12,7 +12,7 @@
         
         }
             .heart {
-                position:top;
+                position:absolute;
                 color: #ff4d88;
                 font-size: 24px;
                 animation: fall linear infinite;
@@ -21,7 +21,7 @@
           
               @keyframes fall {
                 0% {
-                  transform: translateY(-10px) rotate(0deg);
+                  transform: translateY(-100px) rotate(0deg);
                   opacity: 1;
                 }
                 100% {
@@ -47,6 +47,7 @@
           heart.classList.add("heart");
           heart.innerText = "❤️";
           heart.style.left = Math.random() * 100 + "vw";
+          heart.style.top = Math.random() *100 +"vw";
           heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
           heart.style.fontSize = (Math.random() * 20 + 20) + "px";
           document.body.appendChild(heart);
