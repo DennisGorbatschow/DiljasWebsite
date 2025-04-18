@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>One Question</title>
+        <link rel="stylesheet" href="diljasStyle.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    </head>
+    <body>
+        <div class="image4">
+            <img src="flower.webp" width="400px"/>
+        </div>
+    <h1>Ты меня любишь ?</h1>
+    <button id="button1" type="button">Да :3</button>
+    <button id="button2" type="button">Фу нет &#129326</button>
+    </body>
+    <script>
+        var button = document.getElementById("button1");
+    button.setAttribute("onclick", "move();");
+    function move() {
+        window.location.href = "file:///D:/Git%20Aufgaben/DiljasWebsite/love.html"
+    };
+
+    var b = document.querySelector("#button2");
+    b.style.position = "absolute";
+b.addEventListener("click",change);
+b.addEventListener("mouseenter", change);
+function change()
+{
+    var i = Math.floor(Math.random()*500)+1;
+    var j = Math.floor(Math.random()*500)+1;
+    b.style.left = i+"px";
+    b.style.top = j+"px";
+}
+    </script>
+
+
+</body>
+</html>
