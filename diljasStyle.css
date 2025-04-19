@@ -9,38 +9,47 @@ body{
     color: black;
 }
 
-.image-wrapper {
+.image-hover-box {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 100px auto;
   }
   
- .collage {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%; /* appears to the right of main image */
-  width: 400px;
-  height: 300px;
-  background: white;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  z-index: 10;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.collage img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.collage img:hover {
-  transform: scale(1.05);
-}
-
+  .main-img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .collage {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+  .collage img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .image-hover-box:hover .collage {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .collage img:hover {
+    transform: scale(1.05);
+  }
+  
