@@ -11,45 +11,55 @@ body{
 
 .image-hover-box {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin: 100px auto;
+    display: inline-block;
   }
-  
+
   .main-img {
     width: 300px;
-    height: auto;
-    border-radius: 12px;
+    border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    z-index: 1;
+    position: relative;
   }
-  
+
   .collage {
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.4s ease;
     pointer-events: none;
   }
-  
+
+  .collage.left {
+    left: -120px;
+  }
+
+  .collage.right {
+    right: -120px;
+  }
+
   .collage img {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   }
-  
+
+  .collage img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
   .image-hover-box:hover .collage {
     opacity: 1;
     pointer-events: auto;
-  }
-  
-  .collage img:hover {
-    transform: scale(1.05);
   }
   
