@@ -14,33 +14,33 @@ body{
     display: inline-block;
   }
   
-  .collage {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%; /* appears to the right of main image */
-    width: 400px;
-    height: 300px;
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    z-index: 10;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .collage img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s;
-  }
-  
-  .collage img:hover {
-    transform: scale(1.05);
-  }
+ .collage {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* appears to the right of main image */
+  width: 400px;
+  height: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  z-index: 10;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.collage img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.collage img:hover {
+  transform: scale(1.05);
+}
 
